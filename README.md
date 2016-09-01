@@ -267,12 +267,12 @@ $ docker run -d --name wordpress -p 80:80 -p 443:443 \
 ### SMTP Configuration
 
 To configure WordPress to send email using SMTP you can set the following environment variables:
-- `WORDPRESS_SMTP_HOST`: Host for outgoing SMTP email.
-- `WORDPRESS_SMTP_PORT`: Port for outgoing SMTP email.
-- `WORDPRESS_SMTP_USER`: User of SMTP used for authentication (likely email).
-- `WORDPRESS_SMTP_PASSWORD`: Password for SMTP.
-- `WORDPRESS_SMTP_USERNAME`: User name for SMTP emails.
-- `WORDPRESS_SMTP_PROTOCOL`: Secure connection protocol to use for SMTP [tls, ssl, none].
+- `SMTP_HOST`: Host for outgoing SMTP email.
+- `SMTP_PORT`: Port for outgoing SMTP email.
+- `SMTP_USER`: User of SMTP used for authentication (likely email).
+- `SMTP_PASSWORD`: Password for SMTP.
+- `SMTP_USERNAME`: User name for SMTP emails.
+- `SMTP_PROTOCOL`: Secure connection protocol to use for SMTP [tls, ssl, none].
 
 This would be an example of SMTP configuration using a GMail account:
 
@@ -288,6 +288,7 @@ This would be an example of SMTP configuration using a GMail account:
       - SMTP_PORT=587
       - SMTP_USER=your_email@gmail.com
       - SMTP_PASSWORD=your_password
+      - SMTP_PROTOCOL=tls
     volumes_from:
       - application_data
 ```
