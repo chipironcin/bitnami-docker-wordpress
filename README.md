@@ -271,6 +271,7 @@ To configure WordPress to send email using SMTP you can set the following enviro
 - `WORDPRESS_SMTP_PORT`: Port for outgoing SMTP email.
 - `WORDPRESS_SMTP_USER`: User of SMTP used for authentication (likely email).
 - `WORDPRESS_SMTP_PASSWORD`: Password for SMTP.
+- `WORDPRESS_SMTP_USERNAME`: User name for SMTP emails.
 - `WORDPRESS_SMTP_PROTOCOL`: Secure connection protocol to use for SMTP [tls, ssl, none].
 
 This would be an example of SMTP configuration using a GMail account:
